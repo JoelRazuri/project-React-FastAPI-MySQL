@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from decouple import config
 
 
-engine = create_engine(config("URL_CONNECTION"))
+engine = create_engine(config("URL_CONNECTION", cast=str), echo=True)
 local_session = sessionmaker(autoflush=False, autocommit=False, bind=engine)
 Base = declarative_base()
 
