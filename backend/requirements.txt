@@ -1,13 +1,16 @@
 annotated-types==0.5.0
 anyio==3.7.1
+cffi==1.15.1
 click==8.1.6
 colorama==0.4.6
+cryptography==41.0.3
 fastapi==0.101.1
 greenlet==2.0.2
 h11==0.14.0
 idna==3.4
 mysql==0.0.3
 mysqlclient==2.2.0
+pycparser==2.21
 pydantic==2.1.1
 pydantic_core==2.4.0
 PyMySQL==1.1.0
