@@ -6,7 +6,7 @@ from app.schemas.user_schema import UserData
 class UserService():
     @staticmethod
     async def get_users(db: Session):
-        return await db.query(User).all()
+        return db.query(User).all()
     
     @staticmethod
     async def get_user_by_id( db: Session, id: int):
