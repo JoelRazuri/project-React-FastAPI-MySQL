@@ -19,7 +19,7 @@ class UserService():
     @staticmethod
     async def create_user(db: Session, user: UserData):
         fake_pass = user.password + "#fake" # Simula encriptación
-        new_user = UserData(username=user.username, password=fake_pass)
+        new_user = User(username=user.username, password=fake_pass)
 
         db.add(new_user)
         db.commit()
