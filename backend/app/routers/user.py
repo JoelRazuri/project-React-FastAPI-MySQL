@@ -11,7 +11,7 @@ user_router = APIRouter()
 
 
 @user_router.get("/", response_model=list[UserId])
-async def get_users(db: Session = Depends(get_db())):
+async def get_users(db: Session = Depends(get_db)):
     return await UserService.get_users(db)
 
 

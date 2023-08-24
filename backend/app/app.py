@@ -10,4 +10,4 @@ async def hello():
 
 
 # Routers
-app.include_router(user_router, prefix="api/users", tags=["users"])
+app.include_router(user_router, prefix="/api/users", tags=["users"])
