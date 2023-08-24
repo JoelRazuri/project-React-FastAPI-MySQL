@@ -10,11 +10,11 @@ class UserService():
     
     @staticmethod
     async def get_user_by_id( db: Session, id: int):
-        return await db.query(User).filter(User.id == id).first()
+        return db.query(User).filter(User.id == id).first()
     
     @staticmethod
     async def get_user_by_username( db: Session, username: str):
-        return await db.query(User).filter(User.username == username).first()
+        return db.query(User).filter(User.username == username).first()
     
     @staticmethod
     async def create_user(db: Session, user: UserData):
