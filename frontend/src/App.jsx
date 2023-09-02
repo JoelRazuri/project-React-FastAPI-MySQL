@@ -17,7 +17,7 @@ function App() {
       <CreateUser/>
       {
         users.map (user => (
-          <UserBox name={user.name} password={user.password} id={user.id} key={user.id}/>
+          <UserBox name={user.username} password={user.password} id={user.id} key={user.id}/>
         ))
       }
     </main>
