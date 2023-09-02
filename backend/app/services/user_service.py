@@ -18,6 +18,11 @@ class UserService():
     
     @staticmethod
     async def create_user(db: Session, user: UserData):
+        if not user.username:
+            return None
+        if not user.password:
+            return None
+        
         fake_pass = user.password + "#fake" # Simula encriptación
         new_user = User(username=user.username, password=fake_pass)
 
