@@ -36,5 +36,13 @@ async def create_user(user: UserData, db: Session = Depends(get_db)):
             status_code=status.HTTP_400_BAD_REQUEST, 
             detail="El nombre de usuario ya existe.")
     
-    return await UserService.create_user(db, user)
+    user = await UserService.create_user(db, user)
+
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Debe completar todos los campos"
+        )
+    
+    return user
     
