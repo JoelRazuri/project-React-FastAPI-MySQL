@@ -20,7 +20,7 @@ export default function CreateUser() {
                 method: "POST",
                 headers: {"Content-type" : "application/json"},
                 body: JSON.stringify({
-                    name: textName,
+                    username: textName,
                     password: textPassword
                 })
             }
@@ -35,9 +35,9 @@ export default function CreateUser() {
         <form>
             <label htmlFor="name">Name:</label>
             <input id="name" type="text" onChange={handleTextName} value={textName}/>
-            <label htmlFor="passwrod">Password:</label>
+            <label htmlFor="password">Password:</label>
             <input id="password" type="password" onChange={handleTextPassword} value={textPassword}/>
-            <input type="submit" value={CreateUser} onClick={handleClickForm}/>
+            <input type="submit" value="Create User" onClick={handleClickForm}/>
         </form>
     )
 }
