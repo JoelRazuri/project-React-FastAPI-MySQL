@@ -1,5 +1,7 @@
 # project-React-FastAPI-MySQL
 
+CRUD básico para crear usuarios y mostrarlos
+
 --- BACKEND ---
 
 ENTORNO VIRTUAL
